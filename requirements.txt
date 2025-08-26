@@ -1,0 +1,36 @@
+fastapi
+uvicorn[standard]
+pyyaml
+pandas
+yfinance
+pyarrow
+scikit-learn
+networkx
+statsmodels
+matplotlib
+requests
+beautifulsoup4
+cloudscraper
+selenium          # <-- ADD THIS LINE
+webdriver-manager # <-- ADD THIS LINE (Manages the browser driver for you)
+openpyxl
+numpy
+scipy
+shap
+
+# Graph Neural Networks (for Blockchain AML)
+# NOTE: Installing these might require specific CUDA versions if using a GPU.
+# For CPU-only, this should work on most platforms.
+
+torch
+torch_geometric
+
+# HTTP Server for serving files (optional, for running tests)
+#
+# To install torch_geometric with specific CUDA versions:
+# Find your CUDA version by running `nvcc --version` in your terminal.
+# Then find the correct command here: https://pytorch-geometric.readthedocs.io/en/latest/install/installation.html
+# Example for CUDA 11.8:
+# pip install torch_geometric -f https://data.pyg.org/whl/torch-2.1.0+cu118.html
+
+joblib
