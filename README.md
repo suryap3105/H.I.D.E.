@@ -38,31 +38,8 @@ The HIDE framework is built on a **Strategy Pattern**. The core pipeline is a li
 
 ---
 
-## Implemented Domain Strategies
-
-HIDE comes with four fully implemented, advanced strategies:
-
-### 1. Dark Pools: Unsupervised Learning + SHAP
--   **Objective:** Identify anomalous trading venues from aggregate FINRA ATS data.
--   **Model:** An **Isolation Forest** is used to detect statistical outliers in a multi-dimensional feature space (`total_shares`, `avg_trade_size`, `hybrid_score`).
--   **Explainability:** **SHAP (SHapley Additive exPlanations)** is used to explain *why* a venue was flagged, identifying the specific feature that contributed most to its anomaly score.
-
-### 2. Energy Theft: Time-Series Analysis with FFT
--   **Objective:** Detect anomalous household power consumption patterns indicative of non-technical loss.
--   **Model:** A **Fast Fourier Transform (FFT)** based anomaly detector. It learns the dominant periodic (seasonal, daily) patterns in the energy signal and flags days where the consumption deviates significantly from this learned "normal rhythm."
-
-### 3. Blockchain AML: Graph Neural Network (GraphSAGE)
--   **Objective:** Classify "unknown" transactions in the Elliptic Bitcoin dataset as potentially illicit.
--   **Model:** A **GraphSAGE (Graph Sample and Aggregate)** network, a type of Graph Neural Network (GNN). It learns features from a transaction's local neighborhood in the graph to predict its class, effectively learning the patterns of illicit fund flows.
-
-### 4. Supply Chain: Sequential Anomaly Detection with LSTM
--   **Objective:** Identify "ghost" or anomalous shipping carriers from real-world freight data.
--   **Model:** A **Recurrent Neural Network (RNN) based LSTM Autoencoder**. It treats each carrier's monthly shipping history as a sequence. The model learns the patterns of normal logistical behavior, and carriers whose historical sequences cannot be accurately reconstructed are flagged as anomalies.
-
----
-
 ## Project Directory
-
+'''
 /hide_framework/
 |
 |-- adapters/                 # Domain configuration files (YAMLs)
@@ -125,7 +102,7 @@ HIDE comes with four fully implemented, advanced strategies:
 |-- Dockerfile                # For creating a reproducible containerized environment
 |-- train.py                  # **NEW:** Command-line script to train models
 `-- score.py                  # **NEW:** Command-line script to run predictions
-
+'''
 ---
 
 ## Getting Started
